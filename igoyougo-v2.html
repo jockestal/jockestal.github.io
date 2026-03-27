@@ -492,13 +492,14 @@ function startDown() {
   startTime = performance.now();
   titleEl.textContent = "NICE!";
   statusEl.textContent = "COUNTING DOWN";
+  setButtonText("RESET");
   btn.classList.add("down");
-  btn.disabled = true;
+  btn.disabled = false;
   app.classList.add("pulse");
   setMode("down");
   tickDown();
 }
-
+ 
 function tickDown() {
   if (state !== "down") return;
   const t = performance.now() - startTime;
@@ -559,7 +560,9 @@ btn.addEventListener("click", () => {
   } else if (state === "up") {
     stopLoop();
     startDown();
-  }
+  } else if (state === "down") {
+    setIdle();
+  } 
 });
 
 render(0);
