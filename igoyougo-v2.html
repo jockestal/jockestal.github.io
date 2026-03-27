@@ -39,7 +39,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: 120%;
 }
 
 body {
@@ -74,6 +74,14 @@ body.down-mode {
   isolation: isolate;
   overflow: hidden;
 }
+
+.athlete {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    max-width: 420px;
+    z-index: 2;
+   } 
 
 .rings {
   position: absolute;
@@ -336,10 +344,12 @@ body.down-mode .timer-svg {
 </head>
 <body>
 <div class="app" id="app">
+ 
   <div class="rings" aria-hidden="true">
     <div class="circle big"></div>
     <div class="circle mid"></div>
     <div class="circle small"></div>
+     <img class="athlete" src="athlete.png" />
   </div>
   <div class="glow" aria-hidden="true"></div>
 
