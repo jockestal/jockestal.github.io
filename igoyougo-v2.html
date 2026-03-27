@@ -468,7 +468,7 @@ function setIdle() {
 function startUp() {
   state = "up";
   startTime = performance.now();
-  titleEl.textContent = "START!";
+  titleEl.textContent = "GO!";
   statusEl.textContent = "COUNTING UP";
   setButtonText("YOU GO");
   btn.classList.remove("down");
@@ -490,7 +490,7 @@ function startDown() {
   state = "down";
   downFrom = elapsed;
   startTime = performance.now();
-  titleEl.textContent = "GO!";
+  titleEl.textContent = "NICE!";
   statusEl.textContent = "COUNTING DOWN";
   btn.classList.add("down");
   btn.disabled = true;
